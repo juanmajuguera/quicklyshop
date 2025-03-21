@@ -26,6 +26,11 @@
     <li *ngIf="finalPrice() > 0" class="list-group-item fw-bold">Total cursos comprados: <span class="badge text-bg-primary">{{finalPrice() | currency:"&euro;"}}</span></li><!-- Item que muestra el precio total -->
   </ul>
   <app-confirm></app-confirm>
+  <app-status-cart
+  [price]="finalPrice()"
+  [shopModel]="shopModel.shopItems" 
+  (add)="onConfirm()"
+  ></app-status-cart>
 </main>
 
 

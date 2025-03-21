@@ -47,11 +47,16 @@ export class StatefulComponent implements OnInit, OnDestroy { // Define la clase
   cursoMatriculado(_event: Product) { // Método que se llama cuando un curso ha sido matriculado.
     this.clickItem(_event); // Llama a clickItem con el producto recibido para agregarlo a la lista de comprados.
     this.confirmChild.isDisabled = false;
+    this.onConfirm();
   }
 
   finalPrice():number {
     // Calcula el precio total sumando los precios de todos los productos comprados.
     return this.boughtItems.reduce((total, item) => total + item.price, 0);
 
+  }
+
+  onConfirm(){
+    alert('Has añadido un nuevo curso');
   }
 }
