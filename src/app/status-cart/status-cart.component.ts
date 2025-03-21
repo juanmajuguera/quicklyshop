@@ -17,7 +17,9 @@ export class StatusCartComponent implements OnInit, OnChanges {
   ngOnInit(): void {
       
   }
-
+  /* El método onChanges puede ser sustituido por doCheck. Este último realiza comprobaciones
+  en todo el DOM, tiene un alto coste en memoria y no se recomienda */
+  
   ngOnChanges(changes: SimpleChanges): void {
       console.log(changes);
   }
