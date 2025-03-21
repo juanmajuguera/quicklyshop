@@ -1,0 +1,11 @@
+<img src="{{ curso.picture }}" class="card-img-top" alt="{{ curso.title }}"> <!-- Imagen del curso; se obtiene la URL de 'curso.picture' y se establece un texto alternativo utilizando 'curso.title'. -->
+<div class="card-body"> <!-- Contenedor para el contenido de la tarjeta. -->
+  <h5 class="card-title">{{ curso.title }}</h5> <!-- Título del curso, obtenido de la propiedad 'title' del objeto 'curso'. -->
+  <p class="card-text">{{ curso.desc }}</p> <!-- Descripción del curso, obtenida de la propiedad 'desc' del objeto 'curso'. -->
+  <p class="card-text">Precio: {{ curso.price }}€</p> <!-- Muestra el precio del curso, obtenido de la propiedad 'price' del 
+    objeto 'curso', seguido del símbolo de euro. -->
+  <button type="button" class="btn btn-primary" 
+  [disabled]="isDisabled()"  
+(click)="matricularse()">{{ matricula }}</button> <!-- Al hacer clic en el botón, se llama al método 'matricularse()' y se 
+muestra el texto de 'matricula'. -->
+</div>
